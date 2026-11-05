@@ -30,7 +30,7 @@ function resetToGerman() {
 }
 
 async function translatePage() {
-  const apiKey = "AIzaSyC8ltGa4r0_DUPrqyimpYAs84JpeJiTOO0";
+  const apiKey = "";
 
   // Store the original HTML content if it's not already stored
   if (!originalHTML) {
@@ -50,13 +50,13 @@ async function translatePage() {
           target: "en", // (English)
           format: "html",
         }),
-      }
+      },
     );
 
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(
-        `HTTP error! status: ${response.status}, message: ${errorData.error.message}`
+        `HTTP error! status: ${response.status}, message: ${errorData.error.message}`,
       );
     }
 
